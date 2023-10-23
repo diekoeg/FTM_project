@@ -1,5 +1,6 @@
 import React from 'react'
-import { NavItem } from '../Navitem'
+import { NavItem } from '../NavItem'
+
 
 function Navbar() {
   const activeStyle = 'underline underline-offset-4'
