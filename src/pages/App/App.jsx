@@ -2,16 +2,17 @@ import {useRoutes, BrowserRouter} from 'react-router-dom'
 import { useState } from 'react'
 
 // Pages
-import { Home } from './pages/Home'
-import { Join } from './pages/Join'
-import { About } from './pages/About'
-import { Events } from './pages/Events'
-import { Faq } from './pages/FAQ'
-import { Mxteam } from './pages/Mxteam'
-import { Prensa } from './pages/Prensa'
+import { Home } from '../Home'
+import { Join } from '../Join'
+import { About } from '../About'
+import { Events } from '../Events'
+import { Faq } from '../FAQ'
+import { Mxteam } from '../Mxteam'
+import { Prensa } from '../Prensa'
 
 // Components
-import { Navbar } from './components/Navbar'
+import { Navbar } from '../../components/Navbar'
+import { FooterComp } from '../../components/FooterComp'
 
 import './App.css'
 
@@ -23,7 +24,8 @@ const AppRoutes = () => {
     {path: '/events', element: <Events />},
     {path: '/faq', element: <Faq />},
     {path: '/mxteam', element: <Mxteam />},
-    {path: '/prensa', element: <Prensa />}
+    {path: '/prensa', element: <Prensa />},
+    {path: '/*', element: <Home />}
     
   ])
 
@@ -37,6 +39,7 @@ function App() {
     <BrowserRouter>
       <AppRoutes/>
       <Navbar />
+      <FooterComp />
     </BrowserRouter>
   )
 }

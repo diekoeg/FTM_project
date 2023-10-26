@@ -1,14 +1,25 @@
 import React from 'react'
 import { NavItem } from '../NavItem'
+import Logo from "../../assets/logo.svg?react";
 
 
 function Navbar() {
-  const activeStyle = 'underline underline-offset-4'
+  const activeStyle = 'underline underline-offset-4 font-semibold text-lg'
   return (
     <nav className='flex justify-between
-        items-center fixed z-10 w-full py-5 px-8 text-sm font-light top-0'>
-      <ul className='flex items-center gap-3'>
-        <li className='font-semibold text-lg'>
+        items-center fixed z-5 w-full py-5 px-8 text-sm font-light top-0'>
+      <ul className='flex items-center gap-5'>
+        <li>
+            <NavItem to={'/'}
+              activeStyle={activeStyle}
+              >
+                <Logo height="100"/>
+            </NavItem>
+        </li>
+      </ul>
+      <ul className='flex items-center gap-7'>
+            
+        <li>
           <NavItem to={'/'}
             activeStyle={activeStyle}
             >

@@ -1,8 +1,11 @@
 import React from 'react'
+import Layout from '../../components/Layout'
 
 function Faq() {
   return (
-    <div>Faq</div>
+    <Layout>
+      FAQ
+    </Layout>
   )
 }
 

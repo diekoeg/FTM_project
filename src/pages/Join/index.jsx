@@ -1,8 +1,11 @@
 import React from 'react'
+import Layout from '../../components/Layout'
 
 function Join() {
   return (
-    <div>Join</div>
+    <Layout>
+      Join
+    </Layout>
   )
 }
 

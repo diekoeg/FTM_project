@@ -1,8 +1,11 @@
 import React from 'react'
+import Layout from '../../components/Layout'
 
 function Mxteam() {
   return (
-    <div>Mxteam</div>
+    <Layout>
+      MX Team
+    </Layout>
   )
 }
 
