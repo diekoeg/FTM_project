@@ -7,30 +7,31 @@ import { CardContainer } from '../../components/CardContainer'
 
 function Home() {
   const placeholder= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+  const imgPlaceHolder = "https://placehold.co/600x600"
   let infoCards = ([
     {
-      img:'src/assets/placeholder.webp',
+      img:imgPlaceHolder,
       title:'¡Conoce al Equipo Mexicano rumbo al FTJ!',
       text:placeholder,
       isRight:true,
       color:'bg-orange-200'
     },
     {
-      img:'src/assets/placeholder.webp',
+      img:imgPlaceHolder,
       title:'¿Te gustaría unirte al Equipo Mexicano?',
       text:placeholder,
       isRight:false,
       color:'bg-yellow-200'
     },
     {
-      img:'src/assets/placeholder.webp',
+      img:imgPlaceHolder,
       title:'Nuestras redes de comunicación social',
       text:placeholder,
       isRight:true,
       color:'bg-red-200'
     },
     {
-      img:'src/assets/placeholder.webp',
+      img:imgPlaceHolder,
       title:'¡Conoce las últimas novedades!',
       text:placeholder,
       isRight:false,
