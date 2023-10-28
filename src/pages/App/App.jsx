@@ -1,4 +1,5 @@
 import {useRoutes, BrowserRouter} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react'
 
 // Pages
@@ -11,7 +12,7 @@ import { Mxteam } from '../Mxteam'
 import { Prensa } from '../Prensa'
 
 // Components
-import { Navbar } from '../../components/Navbar'
+import { MyNavbar } from '../../components/MyNavbar'
 import { FooterComp } from '../../components/FooterComp'
 
 import './App.css'
@@ -38,7 +39,7 @@ function App() {
   return (
     <BrowserRouter>
       <AppRoutes/>
-      <Navbar />
+      <MyNavbar />
       <FooterComp />
     </BrowserRouter>
   )
