@@ -3,15 +3,13 @@ import Logo from "../../assets/logo.svg?react";
 import { Navbar} from 'flowbite-react';
 import { NavItem } from '../NavItem';
 
-
-
-
 function MyNavbar() {
-  const activeStyle = 'underline underline-offset-4 font-semibold text-lg'
+  const activeStyle = 'underline underline-offset-4 font-semibold text-2xl'
   return (
-    <nav className=' top-0 fixed w-full md:absolute border-b-2 border-gray-400'>
-      <Navbar fluid rounded className=' w-full px-5 bg-gray-200 font-[Raleway] lg:block '>
-        <NavItem   to={'/'}
+    <nav className='top-0 fixed w-full md:absolute border-b-2 border-gray-400 z-10'>
+      <Navbar fluid rounded className='w-full px-5 bg-gray-200 font-[Raleway] lg:block '>
+        <NavItem  className
+            to={'/'}
             activeStyle={activeStyle}
             >
               <Logo height="130" className="max-w-[250px] "/>
@@ -23,11 +21,6 @@ function MyNavbar() {
               >
                 Home
           </NavItem>
-          <NavItem to={'/about'}
-            activeStyle={activeStyle}
-            >
-              Acerca del FMJ
-          </NavItem>
           <NavItem to={'/mxteam'}
               activeStyle={activeStyle}
             >
@@ -37,11 +30,6 @@ function MyNavbar() {
               activeStyle={activeStyle}
             >
               Prensa
-          </NavItem>
-          <NavItem to={'/join'}
-              activeStyle={activeStyle}
-            >
-              ¡Únete!
           </NavItem>
           <NavItem to={'/events'}
               activeStyle={activeStyle}

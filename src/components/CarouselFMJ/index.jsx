@@ -21,7 +21,7 @@ function CarouselFMJ() {
       <Carousel.Item>
         <HomeCard 
           isVideo={false}
-          url={'src/assets/Portada.webp'}
+          url={'https://placehold.co/600x365'}
           title={'titulo 2?'}
           subtitle={'Sub2 ?'} 
           text={texto1}
