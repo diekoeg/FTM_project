@@ -1,29 +1,40 @@
 import React from 'react'
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
+import { MapComponent } from '../MapComponent'
 
 
 function MapContainer() {
-  const ref = React.useRef(null);
-  const [map, setMap] = React.useState();
+  const [searchValue, setSearchValue] = React.useState('');
 
-  React.useEffect(() => {
-    if (ref.current && !map) {
-      setMap(new window.google.maps.Map(ref.current, {}));
-    }
-  }, [ref, map]);
 
   let proyectos = ([
     {estado: 'Sinaloa',categoria:'Ciencia'},
-    {estado: 'Estado de México',categoria:'Tecnologia'},
+    {estado: 'México',categoria:'Tecnologia'},
     {estado: 'CDMX',categoria:'Deporte'},
-    {estado: 'Monterrey',categoria:'Educación'},
+    {estado: 'Nuevo León',categoria:'Educación'},
     {estado: 'Sonora',categoria:'Cultura'},
+    {estado: 'Veracruz de Ignacio de la Llave',categoria:'Cultura'},
   ])
 
+  let states = proyectos.map((project) => (
+    project.estado
+  ))
+
+  const filteredStates = states.filter((estado) => {
+    const estadoText = estado.toLocaleLowerCase();
+    const searchText = searchValue.toLowerCase();
+    return estadoText.includes(searchText);
+  })
+
   return (
-    <Wrapper apiKey={"YOUR_API_KEY"}>
-      <YourComponent/>
-    </Wrapper>
+    <div className=' flex w-full gap-1'>
+      <MapComponent data={filteredStates}/>
+      <input onChange={(event) => {
+        setSearchValue(event.target.value)
+        }} 
+        value={searchValue}
+        />
+    </div>
+    
   )
 }
 
