@@ -6,8 +6,8 @@ import { NavItem } from '../NavItem';
 function MyNavbar() {
   const activeStyle = 'underline underline-offset-4 font-semibold text-2xl'
   return (
-    <nav className='top-0 fixed w-full md:absolute border-b-2 border-gray-400 z-10'>
-      <Navbar fluid rounded className='w-full px-5 bg-gray-200 font-[Raleway] lg:block '>
+    <nav className='bg-indigo-900 top-0 fixed w-full md:absolute border-b-2 border-gray-400 z-10'>
+      <Navbar fluid rounded className='bg-indigo-900 text-white w-full px-5 font-[Raleway] lg:block '>
         <NavItem  className
             to={'/'}
             activeStyle={activeStyle}

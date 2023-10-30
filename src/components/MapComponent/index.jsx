@@ -1,6 +1,6 @@
 import React from 'react'
 import { geoModifiedStereographicGs48 } from "d3-geo-projection"
-import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
+import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps';
 
 
 
@@ -13,19 +13,21 @@ const projection = geoModifiedStereographicGs48()
   .translate([520,-80])
 
   return (
-    <ComposableMap projection={projection} className='border-2 border-black'>
+    <ComposableMap projection={projection} className='border-2 rounded-tr-3xl rounded-bl-3xl bg-indigo-950'>
       <Geographies geography={geoUrl} >
         {({ geographies }) =>
           geographies.map((geo) => (
             <Geography 
               key={geo.rsmKey} 
               geography={geo} 
-              className={`${data.includes(geo.properties.state_name) && 'fill-cyan-500'} 
-                        fill-black hover:fill-gray-500`}
+              className={`${data.includes(geo.properties.state_name) && 'fill-lime-600'} 
+                        fill-green-600 hover: fill-cyan-500`}}
               />
           ))
         }
       </Geographies>
+    
+
     </ComposableMap>
   )
 }
