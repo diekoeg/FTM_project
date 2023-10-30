@@ -21,7 +21,7 @@ const projection = geoModifiedStereographicGs48()
               key={geo.rsmKey} 
               geography={geo} 
               className={`${data.includes(geo.properties.state_name) && 'fill-lime-600'} 
-                        fill-green-600 hover: fill-cyan-500`}
+                        fill-green-600 hover:fill-cyan-500`}
               />
           ))
         }
