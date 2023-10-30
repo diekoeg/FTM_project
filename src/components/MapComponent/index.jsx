@@ -22,7 +22,7 @@ const projection = geoModifiedStereographicGs48()
               geography={geo} 
               className={`${data.includes(geo.properties.state_name) && 'fill-cyan-500'} 
                         fill-black hover:fill-gray-500`}
-              onClick={() =>console.log(geo.properties.state_name)}/>
+              />
           ))
         }
       </Geographies>

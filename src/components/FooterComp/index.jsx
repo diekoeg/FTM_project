@@ -16,13 +16,13 @@ function FooterComp() {
 					<div>
 						<Footer.Title title="Sobre nosotros" />
 						<Footer.LinkGroup col>
-							<Footer.Link href="/about">
+							<Footer.Link href="/mxteam">
 								Misión
 							</Footer.Link>
-							<Footer.Link href="/about">
+							<Footer.Link href="/mxteam">
 								Visión
 							</Footer.Link>
-							<Footer.Link href="/mxteam">
+							<Footer.Link href="/mxteam#team">
 								Equipo Mexicano
 							</Footer.Link>
 						</Footer.LinkGroup>

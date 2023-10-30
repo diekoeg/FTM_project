@@ -4,7 +4,7 @@ import { AboutCard } from '../AboutCard'
 function AboutContainer() {
   return (
     <div className='w-full py-10 flex flex-col'>      
-      <AboutCard 
+      <AboutCard
         title='Acerca del FJM'
         text='Somos un grupo integrado por individuos, movimientos e instituciones que 
         impulsan,promueven y trabajan con la juventud, científicos, investigadores, 
