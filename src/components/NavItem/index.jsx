@@ -6,7 +6,7 @@ function NavItem({to, children, activeStyle}) {
   return (
     <NavLink
       to={to}
-      className={({ isActive }) => (isActive ? activeStyle : 'text-lg')}
+      className={({ isActive }) => (isActive ? activeStyle : 'text-lg hover:scale-105 ')}
     >
       {children}
     </NavLink>
