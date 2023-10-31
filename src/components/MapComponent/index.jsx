@@ -6,7 +6,7 @@ import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps
 
 function MapComponent({data}) {
   //const geoUrl = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json'
-  const geoUrl = 'src/data/map.json'
+  const geoUrl = new URL('/src/data/map.json',import.meta.url).href
 
 const projection = geoModifiedStereographicGs48()
   .scale(1500)

@@ -17,6 +17,8 @@ function CarouselFMJ() {
      preparatorias que faciliten la comunicación e interacción entre los interesados y finalmente, enviar recomendaciones a la Dirección \
      del Festival para la selección y preparación de la delegación mexicana."
 
+  const video = new URL('/src/assets/video1.webm',import.meta.url).href
+
 
   return (
     <Carousel>
@@ -43,7 +45,7 @@ function CarouselFMJ() {
       <Carousel.Item>
         <HomeCard 
           isVideo={true}
-          url={'src/assets/video1.webm'}
+          url={video}
           title={'¿Qué es el Festival Mundial de las Juventudes?'}
           subtitle={'¡El Festival Mundial de la Juventud y los Estudiantes es el festival más importante en su tipo a nivel mundial!'} 
           text={'Reúne a jóvenes especialistas de más de 180 países provenientes de América, Oriente Medio, África, Eurasia, Asia y Oceanía, y Europa. Su misión es impulsar un movimiento juvenil global en torno de la idea de justicia y consolidar el papel de la juventud en el sistema emergente de relaciones internacionales. La agenda del Festival incluye una serie de programas científicos, educativos, de debate, culturales y deportivos y tiene proyectada la participación de más de 20,000 personas provenientes de todo el mundo.'}
