@@ -21,39 +21,42 @@ function CarouselFMJ() {
 
 
   return (
-    <Carousel>
-      <Carousel.Item>
-        <HomeCard 
-          isVideo={false}
-          url={'https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FFMJMEXICO2024%2Fvideos%2F341917034860801%2F&show_text=false&width=560&t=0'}
-          title={'FMJ Embajada Rusa Mexico'}
-          subtitle={'Promo Oficial'} 
-          text={texto2}
-          hiper={'https://clck.ru/35Kmwj'}
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <HomeCard 
-          isVideo={false}
-          url={'https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FFMJMEXICO2024%2Fvideos%2F250425884205430%2F&show_text=false&width=560&t=0'}
-          title={'Festival Mundial de la Juventud 2024 '}
-          subtitle={'Promo Oficial'} 
-          text={texto1}
-          hiper={'https://linktr.ee/fmjmexico2024'}
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <HomeCard 
-          isVideo={true}
-          url={video}
-          title={'¿Qué es el Festival Mundial de las Juventudes?'}
-          subtitle={'¡El Festival Mundial de la Juventud y los Estudiantes es el festival más importante en su tipo a nivel mundial!'} 
-          text={'Reúne a jóvenes especialistas de más de 180 países provenientes de América, Oriente Medio, África, Eurasia, Asia y Oceanía, y Europa. Su misión es impulsar un movimiento juvenil global en torno de la idea de justicia y consolidar el papel de la juventud en el sistema emergente de relaciones internacionales. La agenda del Festival incluye una serie de programas científicos, educativos, de debate, culturales y deportivos y tiene proyectada la participación de más de 20,000 personas provenientes de todo el mundo.'}
-          hiper={''}
-        />
-      </Carousel.Item>
-      
-    </Carousel>
+    <div className='w-[90%] sd:w-4/6'>
+      <Carousel>
+        <Carousel.Item>
+          <HomeCard 
+            isVideo={false}
+            url={'https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FFMJMEXICO2024%2Fvideos%2F341917034860801%2F&show_text=false&width=560&t=0'}
+            title={'FMJ Embajada Rusa Mexico'}
+            subtitle={'Promo Oficial'} 
+            text={texto2}
+            hiper={'https://clck.ru/35Kmwj'}
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <HomeCard 
+            isVideo={false}
+            url={'https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FFMJMEXICO2024%2Fvideos%2F250425884205430%2F&show_text=false&width=560&t=0'}
+            title={'Festival Mundial de la Juventud 2024 '}
+            subtitle={'Promo Oficial'} 
+            text={texto1}
+            hiper={'https://linktr.ee/fmjmexico2024'}
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <HomeCard 
+            isVideo={true}
+            url={video}
+            title={'¿Qué es el Festival Mundial de las Juventudes?'}
+            subtitle={'¡El Festival Mundial de la Juventud y los Estudiantes es el festival más importante en su tipo a nivel mundial!'} 
+            text={'Reúne a jóvenes especialistas de más de 180 países provenientes de América, Oriente Medio, África, Eurasia, Asia y Oceanía, y Europa. Su misión es impulsar un movimiento juvenil global en torno de la idea de justicia y consolidar el papel de la juventud en el sistema emergente de relaciones internacionales. La agenda del Festival incluye una serie de programas científicos, educativos, de debate, culturales y deportivos y tiene proyectada la participación de más de 20,000 personas provenientes de todo el mundo.'}
+            hiper={''}
+          />
+        </Carousel.Item>
+        
+      </Carousel>
+    </div>
+   
   )
 }
 

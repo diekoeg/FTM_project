@@ -4,18 +4,24 @@ import { Navbar} from 'flowbite-react';
 import { NavItem } from '../NavItem';
 
 function MyNavbar() {
+  const [collapsed,setCollapsed] = React.useState(true);
+  const handleNav = () => (
+    setCollapsed((state)=>!state)
+  )
+
   const activeStyle = 'underline underline-offset-4 font-semibold text-2xl'
   return (
-    <nav className='bg-indigo-900 top-0 fixed w-full md:absolute border-b-2 border-gray-400 z-10'>
+    <nav className='bg-indigo-900 top-0 fixed w-full md:absolute z-10'>
       <Navbar fluid rounded className='bg-indigo-900 text-white w-full px-5 font-[Raleway] lg:block '>
         <NavItem  className
             to={'/'}
             activeStyle={activeStyle}
             >
-              <Logo height="130" className="max-w-[250px] "/>
+              <Logo height="300" className="max-w-[200px] -mt-15 max-h-[100px] fill-white xl:ml-24"/>
         </NavItem>
-        <Navbar.Toggle />
-        <Navbar.Collapse>
+        <Navbar.Toggle onClick={handleNav}/>
+        <Navbar.Collapse className={`-mt-5 ${collapsed ? 'flex':'hidden'}`} 
+        onClick={handleNav}>
           <NavItem to={'/'}
               activeStyle={activeStyle}
               >

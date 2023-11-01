@@ -7,14 +7,17 @@ function CarouselHome() {
   const img2 = new URL('/src/assets/EVENTOS.webp',import.meta.url).href
 
   return (
-    <Carousel fade>
-      <Carousel.Item>
-        <Image src={img1}/>
-      </Carousel.Item>
-      <Carousel.Item>
-        <Image src={img2} />
-      </Carousel.Item>
-    </Carousel>
+    <div className='w-full md:w-4/6'>
+      <Carousel fade>
+        <Carousel.Item>
+          <Image src={img1}/>
+        </Carousel.Item>
+        <Carousel.Item>
+          <Image src={img2} />
+        </Carousel.Item>
+      </Carousel>
+    </div>
+    
   )
 }
 

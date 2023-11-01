@@ -6,11 +6,11 @@ import Logo from "../../assets/logo2.svg?react";
 
 function FooterComp() {
 	return (
-		<Footer className="bg-indigo-900">
-		<div className=" w-full flex flex-col justify-center font-[Raleway]">
-			<div className=" w-full flex flex-row flex-wrap justify-center px-16 py-8 sm:justify-between">
-				<div className="w-full flex items-center justify-center sm:w-auto">
-					<Logo height="200" className="max-w-[200px]"/>
+		<Footer className="bg-indigo-900 rounded-none">
+		<div className="w-full flex flex-col justify-center font-[Raleway]">
+			<div className="w-full flex flex-row flex-wrap justify-center px-16 py-8 sm:justify-between">
+				<div className="ml-6 sm:ml-20 w-full flex items-center justify-center sm:w-auto">
+					<Logo height="200" className=" max-w-[200px]" />
 				</div>
 				<div className=" flex justify-between gap-x-14 lg:gap-x-32 xl:gap-x-52">
 					<div >
@@ -69,6 +69,7 @@ function FooterComp() {
 						href="#"
 						icon={BsFacebook}
 					/>
+					
 					<Footer.Icon  className="text-white"
 						href="#"
 						icon={BsInstagram}

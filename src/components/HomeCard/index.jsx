@@ -11,10 +11,7 @@ function HomeCard({isVideo,url,title,subtitle,text,hiper}) {
         )
       :
       <iframe src={url}  
-              frameborder="0" 
-              allowfullscreen="true" 
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
-              allowFullScreen="true" 
               className='aspect-video object-contain w-full'/>
       }
       
@@ -26,7 +23,7 @@ function HomeCard({isVideo,url,title,subtitle,text,hiper}) {
         <h3 className='py-2.5 text-xl font-semibold text-gray-600 text-center'>
           {subtitle}
         </h3>
-        <p className='text-md text-justify'>
+        <p className='text-md'>
           {text}
         </p>
         {

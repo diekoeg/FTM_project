@@ -6,7 +6,7 @@ function AboutCard( {title, text,subtitle,subtext} ) {
       <h1 className='text-5xl font-[Agbalumo]'>
         {title}
       </h1>
-      <p className='text-xl text-justify'>
+      <p className='text-xl'>
         {text}
       </p>
       {subtitle && 
@@ -15,7 +15,7 @@ function AboutCard( {title, text,subtitle,subtext} ) {
         </h1>
       }
       {subtext && 
-        <p className='text-xl text-justify'>
+        <p className='text-xl'>
           {subtext}
         </p>
       }

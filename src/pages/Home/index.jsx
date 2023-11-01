@@ -40,7 +40,7 @@ function Home() {
   ])
   return (
     <Layout>
-      <h1 className='my-5 pt-5 text-6xl sm:text-6xl text-center font-thin'> 
+      <h1 className='my-5 pt-5 text-4xl sm:text-6xl text-center font-bold'> 
         ¡MÉXICO RUMBO AL FESTIVAL MUNDIAL DE LAS JUVENTUDES RUSIA 2024! 
       </h1>
       <CarouselHome />
