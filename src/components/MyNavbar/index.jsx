@@ -4,7 +4,7 @@ import { Navbar} from 'flowbite-react';
 import { NavItem } from '../NavItem';
 
 function MyNavbar() {
-  const [collapsed,setCollapsed] = React.useState(true);
+  const [collapsed,setCollapsed] = React.useState(false);
   const handleNav = () => (
     setCollapsed((state)=>!state)
   )
