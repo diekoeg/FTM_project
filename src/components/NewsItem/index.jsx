@@ -5,7 +5,7 @@ import removeHTMLTagFromString from '/src/utils/removeHTMLTagFromString.js'
 import getFirstP from '/src/utils/getFirstP.js'
 import reformatDate from '/src/utils/reformatDate.js'
 
-function NewsItem({title,date,description,image}) {
+function NewsItem({title,date,description,image,url}) {
 
   let firstP = getFirstP(description)
   description = removeHTMLTagFromString(firstP)
@@ -36,9 +36,11 @@ function NewsItem({title,date,description,image}) {
                 </p>
               </Timeline.Body>
               <Button color="gray">
-                <p>
-                  Ver más
-                </p>
+                <span>
+                  <a href={url}>
+                    Ver más
+                  </a>
+                </span>
                 <HiArrowNarrowRight className="ml-2 h-3 w-3" />
               </Button>
             </div>

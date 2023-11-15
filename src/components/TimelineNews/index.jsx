@@ -7,6 +7,7 @@ function TimelineNews({children}) {
       <Timeline>
         {children}
       </Timeline>
+      
     </div>
     
   )
