@@ -16,40 +16,43 @@ function Prensa() {
   const [items, setItems] = React.useState(null)
   const [countPosts, setCountPosts] = React.useState(0)
   const [currentPage, setCurrentPage] = React.useState(1);
+
   const onPageChange = (page) => {
     setCurrentPage(page)
   }
 
+  // https://public-api.wordpress.com/rest/v1.1/sites/accl7.wordpress.com/posts/
+  
   useEffect(() => {
     try {
-      fetch('https://public-api.wordpress.com/rest/v1.1/sites/accl7.wordpress.com/posts/')
+      fetch('https://fmjmexico2024.org/wp-json/wp/v2/posts')
             .then(res=>res.json())
             .then(data => {
-              setItems(data.posts)
-              //console.log(data)
-              data.found%4 == 0 ? setCountPosts(Math.round(data.found/4)):setCountPosts(Math.round(data.found/4)+1)
+              setItems(data)
+              const size = data.length
+              size%3 == 0 ? setCountPosts(Math.round(size/4)):setCountPosts(Math.round(size/4)+1)
             }
             )
-      console.log(posts)
     } catch (error) {
     }
   }, [])
 
-  
+
   
   return (
     <Layout>
       <h1 className='text-5xl font-[Agbalumo] mt-5'>Las últimas noticias</h1>
       <TimelineNews>
         {items?.slice((currentPage-1)*4,currentPage*4).map((item) => (
-          <NewsItem key={item.ID}
-                    title={item.title}
-                    description={item.content}
+          <NewsItem key={item.id}
+                    title={item.title.rendered}
+                    description={item.content.rendered}
                     date={item.date}
-                    image={item.featured_image}
-                    url={item.guid}
+                    image={item.featured_media}
+                    url={item.guid.rendered}
           />
-        ))
+        )
+        )
         }
       </TimelineNews>
       <div className="flex overflow-x-auto sm:justify-center">

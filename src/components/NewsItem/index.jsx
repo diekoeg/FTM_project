@@ -1,5 +1,5 @@
 import { Button, Timeline } from 'flowbite-react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { HiArrowNarrowRight, HiCalendar } from 'react-icons/hi'
 import removeHTMLTagFromString from '/src/utils/removeHTMLTagFromString.js'
 import getFirstP from '/src/utils/getFirstP.js'
@@ -12,6 +12,21 @@ function NewsItem({title,date,description,image,url}) {
 
   date = reformatDate(date)
 
+  const [img, setImg] = React.useState(null)
+  useEffect(() => {
+    if (image != '0'){
+      try {
+        fetch(`https://fmjmexico2024.org/wp-json/wp/v2/media/${image}`)
+              .then(res=>res.json())
+              .then(data => {
+                setImg(data.link)
+              }
+              )
+      } catch (error) {
+      }
+    }
+    
+  }, [])
 
 
   return (
@@ -23,8 +38,8 @@ function NewsItem({title,date,description,image,url}) {
             {date}
           </Timeline.Time>
           <div className='flex flex-col mt-2 gap-3 w-full items-center lg:items-start lg:flex-row'>
-            {image && 
-              <img src={image} alt={title} className='max-w-[300px]'/>
+            {image != '0' && 
+              <img src={img} alt={title} className='max-w-[300px] max-h-[300px]'/>
             }
             <div>
               <Timeline.Title>
