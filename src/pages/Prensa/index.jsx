@@ -26,7 +26,8 @@ function Prensa() {
             .then(res=>res.json())
             .then(data => {
               setItems(data.posts)
-              data.found%3 == 0 ? setCountPosts(Math.round(data.found/3)):setCountPosts(Math.round(data.found/3)+1)
+              //console.log(data)
+              data.found%4 == 0 ? setCountPosts(Math.round(data.found/4)):setCountPosts(Math.round(data.found/4)+1)
             }
             )
       console.log(posts)
@@ -40,7 +41,7 @@ function Prensa() {
     <Layout>
       <h1 className='text-5xl font-[Agbalumo] mt-5'>Las últimas noticias</h1>
       <TimelineNews>
-        {items?.slice((currentPage-1)*3,currentPage*3).map((item) => (
+        {items?.slice((currentPage-1)*4,currentPage*4).map((item) => (
           <NewsItem key={item.ID}
                     title={item.title}
                     description={item.content}

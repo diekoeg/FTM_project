@@ -35,12 +35,8 @@ function NewsItem({title,date,description,image,url}) {
                   {description}
                 </p>
               </Timeline.Body>
-              <Button color="gray">
-                <span>
-                  <a href={url}>
-                    Ver más
-                  </a>
-                </span>
+              <Button className='w-36' variant="secondary" href={url}>
+                  Ver más
                 <HiArrowNarrowRight className="ml-2 h-3 w-3" />
               </Button>
             </div>

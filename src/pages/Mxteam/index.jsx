@@ -6,6 +6,11 @@ import { TeammatesContainer } from '../../components/TeammatesContainer'
 
 function Mxteam() {
 
+  const qr1 = new URL('/src/assets/qr-1.webp',import.meta.url).href
+  const qr2 = new URL('/src/assets/qr-2.webp',import.meta.url).href
+  const qr3 = new URL('/src/assets/qr-3.webp',import.meta.url).href
+  const qr4 = new URL('/src/assets/qr-4.webp',import.meta.url).href
+
 
   return (
     <Layout>
@@ -34,6 +39,15 @@ function Mxteam() {
       <MapContainer />
       <hr className='border-1 border-black border-solid w-full'/>
       <h1  id='join' className='text-5xl font-[Agbalumo]'>Únete al Proyecto</h1>
+      <p>
+      Del 29 de febrero al 7 de marzo de 2024 En sochi, rusia se llevará acabo el festival mundial de la juventud, El más importante de su tipo a nivel global
+      </p>
+      <p>
+        Para más información escanea los siguientes códigos QR.
+      </p>
+      <div className='flex flex-col flex-wrap md:flex-row'>
+        
+      </div>
       
     </Layout>
   )
