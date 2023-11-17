@@ -10,28 +10,28 @@ function Home() {
   const imgPlaceHolder = "https://placehold.co/600x600"
   let infoCards = ([
     {
-      img:imgPlaceHolder,
+      img:'https://drive.google.com/uc?export=view&id=1vP0I4bPJZBgkZ5ZDuWRlEO7_gUNaJmHz',
       title:'¡Conoce al Equipo Mexicano rumbo al FTJ!',
       text:placeholder,
       isRight:true,
       color:'bg-orange-200'
     },
     {
-      img:imgPlaceHolder,
+      img:'https://drive.google.com/uc?export=view&id=1irZDkom_pRgOIJGhtsD7FSnURLxUX3BK',
       title:'¿Te gustaría unirte al Equipo Mexicano?',
       text:placeholder,
       isRight:false,
       color:'bg-yellow-200'
     },
     {
-      img:imgPlaceHolder,
+      img:'https://drive.google.com/uc?export=view&id=1xT-ECPNH29GBEye-flLB2rsRJGsyW5_s',
       title:'Nuestras redes de comunicación social',
       text:placeholder,
       isRight:true,
       color:'bg-red-200'
     },
     {
-      img:imgPlaceHolder,
+      img:'https://drive.google.com/uc?export=view&id=1A09LFIGUwltrcRbXWDlT3YCd8C72taFr',
       title:'¡Conoce las últimas novedades!',
       text:placeholder,
       isRight:false,

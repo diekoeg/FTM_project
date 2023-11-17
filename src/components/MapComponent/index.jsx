@@ -7,8 +7,7 @@ import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps
 function MapComponent({data}) {
   //const geoUrl = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json'
   const geoUrl = new URL('/src/data/map.json',import.meta.url).href
-
-const projection = geoModifiedStereographicGs48()
+  const projection = geoModifiedStereographicGs48()
   .scale(1500)
   .translate([520,-80])
 
@@ -19,8 +18,8 @@ const projection = geoModifiedStereographicGs48()
           geographies.map((geo) => (
             <Geography 
               key={geo.rsmKey} 
-              geography={geo} 
-              className={`${data.includes(geo.properties.state_name) && 'fill-lime-600'} 
+              geography={geo}
+              className={`${ data && data.includes(geo.properties.state_name) && 'fill-lime-600'} 
                         fill-green-600 hover:fill-cyan-500`}
               />
           ))

@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 // Pages
 import { Home } from '../Home'
-import { Events } from '../Events'
+import { Projects } from '../Projects'
 import { Faq } from '../FAQ'
 import { Mxteam } from '../Mxteam'
 import { Prensa } from '../Prensa'
@@ -18,7 +18,7 @@ import './App.css'
 const AppRoutes = () => {
   let routes = useRoutes([
     {path: '/', element: <Home />},
-    {path: '/events', element: <Events />},
+    {path: '/projects', element: <Projects />},
     {path: '/faq', element: <Faq />},
     {path: '/mxteam', element: <Mxteam />},
     {path: '/prensa', element: <Prensa />},

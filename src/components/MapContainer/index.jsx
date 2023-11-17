@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { MapComponent } from '../MapComponent'
 import { Dropdown, Select } from 'flowbite-react';
 
@@ -16,6 +16,19 @@ function MapContainer() {
   }
 
 
+  const [items, setItems] = React.useState(null)
+  useEffect(() => {
+    try {
+      fetch('https://fmjmexico2024.org/wp-json/wp/v2/tags?_fields=name')
+            .then(res=>res.json())
+            .then(data => {
+              setItems(data.map((value) => value.name))
+            }
+            )
+    } catch (error) {
+    }
+  }, [])
+
   let proyectos = ([
     {estado: 'Sinaloa',categoria:'Ciencia'},
     {estado: 'México',categoria:'Tecnología'},
@@ -29,6 +42,7 @@ function MapContainer() {
     return estado.categoria.includes(categorieDD)
   })
 
+
   let states = filetedStatesByCat.map((project) => (
     project.estado
   ))
@@ -38,7 +52,7 @@ function MapContainer() {
     const searchText = searchValue.toLowerCase();
     return estadoText.includes(searchText);
   })
-
+  //console.log(filteredStates)
  
 
   return (
@@ -61,8 +75,12 @@ function MapContainer() {
           <option>Cultura</option>
           <option>Infancias </option>
         </Select>
-
-        <MapComponent data={filteredStates}/>
+        {items ?
+          <MapComponent data={items}/>
+          :
+          <MapComponent/>
+        }
+       
     </div>
     
   )
