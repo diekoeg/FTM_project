@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-import { Carousel } from 'react-bootstrap'
 import { CardTeammate } from '../CardTeammate'
 import OwlCarousel from 'react-owl-carousel';
 import '/src/utils/owlcarousel/assets/owl.carousel.min.css'
