@@ -1,5 +1,6 @@
 import {useRoutes, BrowserRouter} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '/src/utils/jquery-3.7.1.min.js';
 import { useState } from 'react'
 
 // Pages
